@@ -7,4 +7,4 @@
 #
 grep -n 'search_text' <filename>
 
-eg: grep -n 'search_text' <filename>
+eg: grep -n 'search_text' *
