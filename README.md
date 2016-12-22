@@ -8,3 +8,9 @@
 grep -n 'search_text' <filename>
 
 eg: grep -n 'search_text' *
+
+
+#find the number of non-whitespace characters in a file
+
+tr -d '[:space:]' <filename.txt |wc -c
+
