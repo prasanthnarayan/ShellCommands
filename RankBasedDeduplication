@@ -1,0 +1,7 @@
+
+
+Rank based deduplication
+=======================
+
+ROW_NUMBER() OVER (PARTITION BY <<Deduplication columns>> ORDER BY <Ordering column> DESC) AS <<column alias>> FROM ${DB_NAME}.<<TABLE_NAME>> where ABC ='XYZ') <<QUERY_ALIAS>>
+WHERE <<QUERY_ALIAS>>.<<column alias>> = 1
