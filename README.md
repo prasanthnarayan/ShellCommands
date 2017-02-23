@@ -14,3 +14,7 @@ eg: grep -n 'search_text' *
 
 tr -d '[:space:]' <filename.txt |wc -c
 
+Redirection
+2>&1
+
+exampe: hive -f <script file> > out_file 2>&1
