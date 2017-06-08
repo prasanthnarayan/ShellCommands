@@ -18,3 +18,8 @@ Redirection
 2>&1
 
 exampe: hive -f <script file> > out_file 2>&1
+
+
+Find Class in jar files.
+
+for i in *.jar; do jar -tvf "$i" | grep -Hsi ClassName && echo "$i"; done
