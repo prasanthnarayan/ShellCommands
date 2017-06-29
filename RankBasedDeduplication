@@ -5,3 +5,24 @@ Rank based deduplication
 
 ROW_NUMBER() OVER (PARTITION BY <<Deduplication columns>> ORDER BY <Ordering column> DESC) AS <<column alias>> FROM ${DB_NAME}.<<TABLE_NAME>> where ABC ='XYZ') <<QUERY_ALIAS>>
 WHERE <<QUERY_ALIAS>>.<<column alias>> = 1
+
+--example
+select
+   a.id,
+   a.rank
+  
+from
+   (select
+      id
+      ,ROW_NUMBER() over (partition by 
+                        id 
+                        
+                        order by id) as Rank
+   from
+      DB_NMAE.TBALE_NAME
+   ) as a
+      
+where
+   a.Rank=1
+order by
+   a.ID;
